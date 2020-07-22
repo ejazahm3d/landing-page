@@ -3,7 +3,7 @@ import Layout from "./components/layout"
 import Hero from "./components/blocks/Hero"
 import About from "./components/blocks/About"
 import Courses from "./components/blocks/Courses"
-import Footer from "./components/layout/Footer"
+import Contact from "./components/blocks/Contact"
 
 function App() {
     return (
@@ -11,7 +11,7 @@ function App() {
             <Hero />
             <About />
             <Courses />
-            <Footer />
+            <Contact />
         </Layout>
     )
 }
