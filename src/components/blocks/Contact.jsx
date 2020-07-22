@@ -15,7 +15,9 @@ import ContactAnim from "../../animations/contact.json"
 const Contact = () => {
     const handleOnSubmit = (e) => {
         e.preventDefault()
-        alert("Thank You")
+        alert(
+            "Thank You. Please visit https://www.ejazahmed.com to see my portfolio"
+        )
     }
     return (
         <Flex

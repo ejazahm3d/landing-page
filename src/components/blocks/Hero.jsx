@@ -1,8 +1,9 @@
 import React from "react"
-import { Box, Flex, Heading, Button, Text } from "@chakra-ui/core"
+import { Box, Flex, Heading, Button, Text, Link } from "@chakra-ui/core"
 import Lottie from "react-lottie"
 import Welcome from "../../animations/welcome.json"
 import { motion } from "framer-motion"
+import { FaGithub } from "react-icons/fa"
 
 const MotionFlex = motion.custom(Flex)
 
@@ -49,10 +50,31 @@ const Hero = () => {
                         they need to launch a new career in just 9 months.
                     </Text>
                     <Flex justify="center" mt="1rem">
-                        <Button variantColor="blue" m="0.5rem">
-                            Apply Now
-                        </Button>
-                        <Button m="0.5rem">Join Us</Button>
+                        <Link
+                            href="https://www.ejazahmed.com/"
+                            target="_blank"
+                            rel="noopener noreferer"
+                            _hover={{ textDecor: "none" }}
+                        >
+                            <Button variantColor="blue" m="0.5rem">
+                                Apply Now
+                            </Button>
+                        </Link>
+                        <Link
+                            href="https://github.com/ejazahm3d"
+                            target="_blank"
+                            rel="noopener noreferer"
+                            _hover={{ textDecor: "none" }}
+                        >
+                            <Button
+                                m="0.5rem"
+                                aria-label="Call Segun"
+                                size="md"
+                                leftIcon={FaGithub}
+                            >
+                                Github
+                            </Button>
+                        </Link>
                     </Flex>
                 </Box>
             </MotionFlex>
