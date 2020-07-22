@@ -2,6 +2,9 @@ import React from "react"
 import { Box, Flex, Heading, Button, Text } from "@chakra-ui/core"
 import Lottie from "react-lottie"
 import Welcome from "../../animations/welcome.json"
+import { motion } from "framer-motion"
+
+const MotionFlex = motion.custom(Flex)
 
 const Hero = () => {
     return (
@@ -10,7 +13,14 @@ const Hero = () => {
             align="center"
             wrap="wrap-reverse"
         >
-            <Flex flexGrow={1} justify="center" flexDirection="column">
+            <MotionFlex
+                initial={{ y: "100vh", opacity: 0 }}
+                animate={{ y: 0, opacity: 1 }}
+                transition={{ duration: 1.5, ease: "easeIn" }}
+                flexGrow={1}
+                justify="center"
+                flexDirection="column"
+            >
                 <Box mx="auto" padding="2rem" width={{ md: "50vw" }}>
                     <Heading
                         size="2xl"
@@ -45,8 +55,13 @@ const Hero = () => {
                         <Button m="0.5rem">Join Us</Button>
                     </Flex>
                 </Box>
-            </Flex>
-            <Flex flexGrow={4}>
+            </MotionFlex>
+            <MotionFlex
+                initial={{ x: "100vw", opacity: 0 }}
+                animate={{ x: 0, opacity: 1 }}
+                transition={{ duration: 1.5, ease: "easeIn" }}
+                flexGrow={4}
+            >
                 <Lottie
                     options={{
                         animationData: Welcome,
@@ -54,7 +69,7 @@ const Hero = () => {
                     height={"100%"}
                     width={"100%"}
                 />
-            </Flex>
+            </MotionFlex>
         </Flex>
     )
 }
