@@ -57,7 +57,7 @@ const Hero = () => {
                             _hover={{ textDecor: "none" }}
                         >
                             <Button variantColor="blue" m="0.5rem">
-                                Apply Now
+                                Check Portfolio
                             </Button>
                         </Link>
                         <Link
