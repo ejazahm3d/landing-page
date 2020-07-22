@@ -30,6 +30,7 @@ const NavLink = ({ children, ...props }) => (
 
 const Header = () => {
     const [navbar, setNavbar] = useState(false)
+    const onClose = () => setNavbar(!navbar)
     return (
         <Flex
             bgImage="linear-gradient(90deg, rgba(69,168,222,1) 0%, rgba(39,128,195,1) 100%)"
@@ -64,7 +65,11 @@ const Header = () => {
                 <NavLink href="/#courses" ml="0.5rem">
                     Courses
                 </NavLink>
-                <Link href="/#contact" _hover={{ textDecor: "none" }}>
+                <Link
+                    href="/#contact"
+                    _hover={{ textDecor: "none" }}
+                    onClick={onClose}
+                >
                     <Button ml="0.5rem">Contact now</Button>
                 </Link>
             </Flex>
@@ -79,7 +84,7 @@ const Header = () => {
                 isOpen={navbar}
                 placement="right"
                 size="full"
-                onClose={() => setNavbar(!navbar)}
+                onClose={onClose}
             >
                 <DrawerOverlay />
                 <DrawerContent>
@@ -90,21 +95,39 @@ const Header = () => {
 
                     <DrawerBody>
                         <Flex flexDir="column">
-                            <NavLink href="/#" color="red" mt="1rem">
+                            <NavLink
+                                onClick={onClose}
+                                href="/#"
+                                color="red"
+                                mt="1rem"
+                            >
                                 Home
                             </NavLink>
-                            <NavLink href="/#about" mt="1rem" color="red">
+                            <NavLink
+                                onClick={onClose}
+                                href="/#about"
+                                mt="1rem"
+                                color="red"
+                            >
                                 About
                             </NavLink>
-                            <NavLink href="/#courses" mt="1rem" color="red">
-                                About
+                            <NavLink
+                                onClick={onClose}
+                                href="/#courses"
+                                mt="1rem"
+                                color="red"
+                            >
+                                Courses
                             </NavLink>
 
                             <NavLink
+                                onClick={onClose}
                                 href="/#contact"
                                 _hover={{ textDecor: "none" }}
                             >
-                                <Button mt="1rem">Contact</Button>
+                                <Button mt="1rem" variantColor="blue">
+                                    Contact
+                                </Button>
                             </NavLink>
                         </Flex>
                     </DrawerBody>
