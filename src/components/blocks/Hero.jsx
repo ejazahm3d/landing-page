@@ -6,12 +6,12 @@ import Welcome from "../../animations/welcome.json"
 const Hero = () => {
     return (
         <Flex
-            m={{ sm: "3rem 2rem", lg: "3rem 5rem" }}
+            p={{ sm: "3rem 2rem", lg: "3rem 5rem" }}
             align="center"
             wrap="wrap-reverse"
         >
             <Flex flexGrow={1} justify="center" flexDirection="column">
-                <Box padding="2rem" width={{ md: "50vw" }}>
+                <Box mx="auto" padding="2rem" width={{ md: "50vw" }}>
                     <Heading
                         size="2xl"
                         textAlign="center"
