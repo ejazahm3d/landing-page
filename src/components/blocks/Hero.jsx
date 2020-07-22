@@ -1,7 +1,7 @@
 import React from "react"
 
 const Hero = () => {
-    return <div className="h-64">Hero</div>
+    return <div></div>
 }
 
 export default Hero
