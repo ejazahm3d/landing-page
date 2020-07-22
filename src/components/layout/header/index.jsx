@@ -11,7 +11,6 @@ import {
     DrawerCloseButton,
     DrawerHeader,
     DrawerBody,
-    DrawerFooter,
     Heading,
 } from "@chakra-ui/core"
 import { MdMenu } from "react-icons/md"
