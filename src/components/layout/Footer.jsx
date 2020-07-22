@@ -16,12 +16,22 @@ const Footer = () => {
             </Heading>
             <Flex>
                 <Box mx="0.5rem" cursor="pointer">
-                    <Link>
+                    <Link
+                        href="https://linkedin.com/in/ejazahm3d"
+                        target="_blank"
+                        rel="noopener noreferer"
+                    >
                         <FaLinkedin size="3rem" color="white" />
                     </Link>
                 </Box>
                 <Box mx="0.5rem" cursor="pointer">
-                    <FaGithub size="3rem" color="white" />
+                    <Link
+                        href="https://github.com/ejazahm3d"
+                        target="_blank"
+                        rel="noopener noreferer"
+                    >
+                        <FaGithub size="3rem" color="white" />
+                    </Link>
                 </Box>
             </Flex>
         </Flex>
