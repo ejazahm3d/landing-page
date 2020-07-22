@@ -5,6 +5,7 @@ import Developer from "../../animations/developer.json"
 const About = () => {
     return (
         <Flex
+            id="about"
             p={{ sm: "3rem 2rem", lg: "3rem 5rem" }}
             align="center"
             bg="gray.50"

@@ -55,10 +55,18 @@ const Header = () => {
                 justify="center"
                 align="center"
             >
-                <NavLink ml="0.5rem">Home</NavLink>
-                <NavLink ml="0.5rem">About</NavLink>
-
-                <Button ml="0.5rem">Contact now</Button>
+                <NavLink href="/#" ml="0.5rem">
+                    Home
+                </NavLink>
+                <NavLink href="/#about" ml="0.5rem">
+                    About
+                </NavLink>
+                <NavLink href="/#courses" ml="0.5rem">
+                    Courses
+                </NavLink>
+                <Link href="/#contact" _hover={{ textDecor: "none" }}>
+                    <Button ml="0.5rem">Contact now</Button>
+                </Link>
             </Flex>
             <Box
                 display={{ xs: "flex", md: "none" }}
@@ -82,14 +90,22 @@ const Header = () => {
 
                     <DrawerBody>
                         <Flex flexDir="column">
-                            <NavLink color="red" mt="1rem">
+                            <NavLink href="/#" color="red" mt="1rem">
                                 Home
                             </NavLink>
-                            <NavLink mt="1rem" color="red">
+                            <NavLink href="/#about" mt="1rem" color="red">
+                                About
+                            </NavLink>
+                            <NavLink href="/#courses" mt="1rem" color="red">
                                 About
                             </NavLink>
 
-                            <Button mt="1rem">Contact</Button>
+                            <NavLink
+                                href="/#contact"
+                                _hover={{ textDecor: "none" }}
+                            >
+                                <Button mt="1rem">Contact</Button>
+                            </NavLink>
                         </Flex>
                     </DrawerBody>
                 </DrawerContent>

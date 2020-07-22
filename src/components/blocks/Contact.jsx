@@ -19,6 +19,7 @@ const Contact = () => {
     }
     return (
         <Flex
+            id="contact"
             p={{ sm: "3rem 2rem", lg: "3rem 5rem" }}
             align="center"
             bg="gray.50"

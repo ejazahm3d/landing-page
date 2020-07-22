@@ -31,6 +31,7 @@ const Courses = () => {
     ]
     return (
         <Flex
+            id="courses"
             p={{ xs: "2rem 1rem", sm: "3rem 2rem", lg: "3rem 5rem" }}
             align="center"
             flexDir="column"
