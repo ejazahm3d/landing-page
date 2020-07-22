@@ -8,17 +8,32 @@ const Hero = () => {
         <Flex
             m={{ sm: "3rem 2rem", lg: "3rem 5rem" }}
             align="center"
-            wrap="wrap"
+            wrap="wrap-reverse"
         >
             <Flex flexGrow={1} justify="center" flexDirection="column">
                 <Box padding="2rem" width={{ md: "50vw" }}>
-                    <Heading size="2xl" textAlign="center" mt="1rem">
+                    <Heading
+                        size="2xl"
+                        textAlign="center"
+                        mt="1rem"
+                        color="gray.700"
+                    >
                         Welcome To CodeSchool
                     </Heading>
-                    <Heading size="md" textAlign="center" mt="0.5rem">
+                    <Heading
+                        size="md"
+                        textAlign="center"
+                        mt="0.5rem"
+                        color="gray.600"
+                    >
                         Join us on a journey to learn Code
                     </Heading>
-                    <Text textAlign="center" mt="1rem">
+                    <Text
+                        fontSize="md"
+                        textAlign="center"
+                        mt="1rem"
+                        color="gray.600"
+                    >
                         Code School is 100% live and online, and uses
                         interactive technology to teach people the tech skills
                         they need to launch a new career in just 9 months.
