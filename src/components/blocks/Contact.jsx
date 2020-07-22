@@ -54,6 +54,8 @@ const Contact = () => {
                         <FormControl mt="1rem">
                             <FormLabel htmlFor="email">Email address</FormLabel>
                             <Input
+                                autoComplete="off"
+                                sugg
                                 type="email"
                                 id="email"
                                 aria-describedby="email-helper-text"
