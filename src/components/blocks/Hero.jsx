@@ -56,7 +56,7 @@ const Hero = () => {
                             rel="noopener noreferer"
                             _hover={{ textDecor: "none" }}
                         >
-                            <Button variantColor="blue" m="0.5rem">
+                            <Button size="lg" variantColor="blue" m="0.5rem">
                                 Check Portfolio
                             </Button>
                         </Link>
@@ -67,9 +67,9 @@ const Hero = () => {
                             _hover={{ textDecor: "none" }}
                         >
                             <Button
+                                size="lg"
                                 m="0.5rem"
                                 aria-label="Call Segun"
-                                size="md"
                                 leftIcon={FaGithub}
                             >
                                 Github
