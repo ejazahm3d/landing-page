@@ -32,7 +32,7 @@ const Contact = () => {
             bg="gray.50"
             wrap="wrap"
         >
-            <Flex maxW="40rem">
+            <Flex flexGrow={4}>
                 <Lottie
                     options={{
                         animationData: ContactAnim,

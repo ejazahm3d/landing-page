@@ -94,7 +94,7 @@ export default function Hero() {
                 initial={{ x: "100vw", opacity: 0 }}
                 animate={{ x: 0, opacity: 1 }}
                 transition={{ duration: 1.5, ease: "easeIn" }}
-                maxW="30rem"
+                flexGrow={4}
             >
                 <Lottie
                     options={{
