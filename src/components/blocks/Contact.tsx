@@ -8,12 +8,16 @@ import {
     Input,
     FormHelperText,
     Button,
-} from "@chakra-ui/core"
+    useBreakpointValue,
+} from "@chakra-ui/react"
 import Lottie from "react-lottie"
 import ContactAnim from "../../animations/contact.json"
 
 const Contact = () => {
-    const handleOnSubmit = (e) => {
+    const padding = useBreakpointValue({ sm: "3rem 2rem", lg: "3rem 5rem" })
+    const width = useBreakpointValue({ md: "50vw", lg: "30vw" })
+
+    const handleOnSubmit = (e: any) => {
         e.preventDefault()
         alert(
             "Thank You. Please visit https://www.ejazahmed.com to see my portfolio"
@@ -22,12 +26,13 @@ const Contact = () => {
     return (
         <Flex
             id="contact"
-            p={{ sm: "3rem 2rem", lg: "3rem 5rem" }}
+            p={padding}
+            justify="center"
             align="center"
             bg="gray.50"
             wrap="wrap"
         >
-            <Flex flexGrow={1}>
+            <Flex maxW="40rem">
                 <Lottie
                     options={{
                         animationData: ContactAnim,
@@ -37,11 +42,7 @@ const Contact = () => {
                 />
             </Flex>
             <Flex flexGrow={1} justify="center" flexDirection="column">
-                <Box
-                    mx="auto"
-                    padding="2rem"
-                    width={{ md: "50vw", lg: "30vw" }}
-                >
+                <Box mx="auto" padding="2rem" width={width}>
                     <Heading
                         size="xl"
                         textAlign="center"

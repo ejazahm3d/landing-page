@@ -1,16 +1,28 @@
 import React from "react"
-import { Box, Flex, Heading, Button, Text, Link } from "@chakra-ui/core"
+import {
+    Box,
+    Flex,
+    Heading,
+    Button,
+    Text,
+    Link,
+    useBreakpointValue,
+} from "@chakra-ui/react"
 import Lottie from "react-lottie"
 import Welcome from "../../animations/welcome.json"
 import { motion } from "framer-motion"
 import { FaGithub } from "react-icons/fa"
 
-const MotionFlex = motion.custom(Flex)
+const MotionFlex = motion(Flex)
 
-const Hero = () => {
+export default function Hero() {
+    const boxWidth = useBreakpointValue({ md: "50vw" })
+    const flexPadding = useBreakpointValue({ sm: "3rem 2rem", lg: "3rem 5rem" })
+
     return (
         <Flex
-            p={{ sm: "3rem 2rem", lg: "3rem 5rem" }}
+            p={flexPadding}
+            justify={"center"}
             align="center"
             wrap="wrap-reverse"
         >
@@ -22,7 +34,7 @@ const Hero = () => {
                 justify="center"
                 flexDirection="column"
             >
-                <Box mx="auto" padding="2rem" width={{ md: "50vw" }}>
+                <Box mx="auto" padding="2rem" width={boxWidth}>
                     <Heading
                         size="2xl"
                         textAlign="center"
@@ -70,7 +82,7 @@ const Hero = () => {
                                 size="lg"
                                 m="0.5rem"
                                 aria-label="Call Segun"
-                                leftIcon={FaGithub}
+                                leftIcon={<FaGithub />}
                             >
                                 Github
                             </Button>
@@ -82,7 +94,7 @@ const Hero = () => {
                 initial={{ x: "100vw", opacity: 0 }}
                 animate={{ x: 0, opacity: 1 }}
                 transition={{ duration: 1.5, ease: "easeIn" }}
-                flexGrow={4}
+                maxW="30rem"
             >
                 <Lottie
                     options={{
@@ -95,5 +107,3 @@ const Hero = () => {
         </Flex>
     )
 }
-
-export default Hero

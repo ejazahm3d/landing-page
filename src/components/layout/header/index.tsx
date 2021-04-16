@@ -12,10 +12,11 @@ import {
     DrawerHeader,
     DrawerBody,
     Heading,
-} from "@chakra-ui/core"
+    useBreakpointValue,
+} from "@chakra-ui/react"
 import { MdMenu } from "react-icons/md"
 
-const NavLink = ({ children, ...props }) => (
+const NavLink = ({ children, ...props }: any) => (
     <Link
         height="100%"
         px={2}
@@ -31,6 +32,8 @@ const NavLink = ({ children, ...props }) => (
 const Header = () => {
     const [navbar, setNavbar] = useState(false)
     const onClose = () => setNavbar(!navbar)
+    const desktopNavDisplay = useBreakpointValue({ base: "none", md: "flex" })
+    const mobileNavDisplay = useBreakpointValue({ base: "flex", md: "none" })
     return (
         <Flex
             bgImage="linear-gradient(90deg, rgba(69,168,222,1) 0%, rgba(39,128,195,1) 100%)"
@@ -51,11 +54,7 @@ const Header = () => {
                 </Text>
             </Flex>
 
-            <Flex
-                display={{ xs: "none", md: "flex" }}
-                justify="center"
-                align="center"
-            >
+            <Flex display={desktopNavDisplay} justify="center" align="center">
                 <NavLink href="/#" ml="0.5rem">
                     Home
                 </NavLink>
@@ -73,10 +72,8 @@ const Header = () => {
                     <Button ml="0.5rem">Contact now</Button>
                 </Link>
             </Flex>
-            <Box
-                display={{ xs: "flex", md: "none" }}
-                onClick={() => setNavbar(!navbar)}
-            >
+
+            <Box display={mobileNavDisplay} onClick={() => setNavbar(!navbar)}>
                 <MdMenu size="1.8rem" color="white" />
             </Box>
 

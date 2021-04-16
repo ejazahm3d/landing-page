@@ -1,11 +1,12 @@
 import React from "react"
-import { Box, Image, Badge } from "@chakra-ui/core"
+import { Box, Image, Badge } from "@chakra-ui/react"
 import { motion } from "framer-motion"
 import { FaStar } from "react-icons/fa"
+import { Course } from "./Courses"
 
-const MotionBox = motion.custom(Box)
+const MotionBox = motion(Box)
 
-const CourseItem = (props) => {
+const CourseItem = (props: { course: Course }) => {
     const property = props.course
     return (
         <MotionBox

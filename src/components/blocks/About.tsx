@@ -1,5 +1,5 @@
 import React from "react"
-import { Flex, Heading, Box, Text } from "@chakra-ui/core"
+import { Flex, Heading, Box, Text } from "@chakra-ui/react"
 import Lottie from "react-lottie"
 import Developer from "../../animations/developer.json"
 const About = () => {

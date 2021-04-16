@@ -1,13 +1,19 @@
 import React from "react"
-import { Flex, Heading, Box, Link } from "@chakra-ui/core"
+import { Flex, Heading, Box, Link, useBreakpointValue } from "@chakra-ui/react"
 import { FaGithub, FaLinkedin } from "react-icons/fa"
 const Footer = () => {
+    const padding = useBreakpointValue({
+        base: "2rem 1rem",
+        sm: "3rem 2rem",
+        lg: "3rem 5rem",
+    })
+
     return (
         <Flex
             bg="gray.600"
             bgImage="linear-gradient(90deg, rgba(69,168,222,1) 0%, rgba(39,128,195,1) 100%)"
             as="footer"
-            p={{ xs: "2rem 1rem", sm: "3rem 2rem", lg: "3rem 5rem" }}
+            p={padding}
             align="center"
             justify="space-between"
         >

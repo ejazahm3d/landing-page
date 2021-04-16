@@ -1,9 +1,23 @@
 import React from "react"
-import { Flex, Heading, Box } from "@chakra-ui/core"
+import { Flex, Heading, Box, useBreakpointValue } from "@chakra-ui/react"
 import CourseItem from "./CourseItem"
 
+export interface Course {
+    imageUrl: string
+    imageAlt: string
+    title: string
+    formattedPrice: string
+    rating: number
+    reviewCount: number
+}
+
 const Courses = () => {
-    const courseList = [
+    const flexPadding = useBreakpointValue({
+        base: "2rem 1rem",
+        sm: "3rem 2rem",
+        lg: "3rem 5rem",
+    })
+    const courseList: Course[] = [
         {
             imageUrl: "/beginner.svg",
             imageAlt: "startup",
@@ -30,12 +44,7 @@ const Courses = () => {
         },
     ]
     return (
-        <Flex
-            id="courses"
-            p={{ xs: "2rem 1rem", sm: "3rem 2rem", lg: "3rem 5rem" }}
-            align="center"
-            flexDir="column"
-        >
+        <Flex id="courses" p={flexPadding} align="center" flexDir="column">
             <Heading
                 size="xl"
                 textAlign="center"

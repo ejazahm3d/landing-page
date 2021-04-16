@@ -1,9 +1,9 @@
 import React from "react"
 import Header from "./header"
-import { Flex } from "@chakra-ui/core"
+import { Flex } from "@chakra-ui/react"
 import Footer from "./Footer"
 
-const Layout = ({ children }) => {
+const Layout = ({ children }: { children: React.ReactElement }) => {
     return (
         <div>
             <Header />
